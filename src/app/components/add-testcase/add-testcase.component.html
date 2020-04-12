@@ -1,0 +1,32 @@
+<form [formGroup]="testCaseForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Add TestCase</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Code" formControlName="code">
+            <mat-error *ngIf="testCaseForm.controls['code'].hasError('required')">
+              Code is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="FunPoint" formControlName="funPoint"></textarea>
+            <mat-error *ngIf="testCaseForm.controls['funPoint'].hasError('required')">
+              FunPoint is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>  
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

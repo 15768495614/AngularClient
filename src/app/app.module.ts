@@ -23,6 +23,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SigninOidcComponent } from './oidc/signin-oidc/signin-oidc.component';
 import { RedirectSilentRenewComponent } from './oidc/redirect-silent-renew/redirect-silent-renew.component';
 import { AuthorizationHeaderInterceptor } from './oidc/authorization-header.interceptor';
+import { AddTestcaseComponent } from './components/add-testcase/add-testcase.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,8 @@ import { AuthorizationHeaderInterceptor } from './oidc/authorization-header.inte
     DashboardComponent,
     TestcaseTableComponent,
     SigninOidcComponent,
-    RedirectSilentRenewComponent
+    RedirectSilentRenewComponent,
+    AddTestcaseComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,11 @@ import { AuthorizationHeaderInterceptor } from './oidc/authorization-header.inte
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

@@ -11,15 +11,17 @@ export class TestcaseTableComponent implements OnInit {
 
   testcases: ITestCase[];
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'summary'];
+  displayedColumns = ['id', 'code', 'funPoint'];
 
   constructor(private testCaseService: TestcaseService) {
 
   }
 
   ngOnInit() {
-    this.testCaseService.getAllTestCase().subscribe(testcases => {
-      this.testcases = testcases;
+    this.testCaseService.getAllTestCase().subscribe(response => {
+      if (response.success) {
+        this.testcases = response.result;
+      }
       console.log(this.testcases);
     });
   }

@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TestcaseTableComponent } from './components/testcase-table/testcase-table.component';
 import { SigninOidcComponent } from './oidc/signin-oidc/signin-oidc.component';
 import { RedirectSilentRenewComponent } from './oidc/redirect-silent-renew/redirect-silent-renew.component';
+import { AddTestcaseComponent } from './components/add-testcase/add-testcase.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'redirect-silentrenew',
     component: RedirectSilentRenewComponent
+  },
+  {
+    path: 'testcase-add',
+    component: AddTestcaseComponent
   },
   {
     path: '**',
