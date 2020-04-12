@@ -1,3 +1,8 @@
+# 这个是前端Angular 项目
+后台项目地址https://github.com/15768495614/XTC.Devops 用Abp框架
+
+单点登录项目地址https://github.com/15768495614/IdentityServer4Demo
+
 # AngularClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
